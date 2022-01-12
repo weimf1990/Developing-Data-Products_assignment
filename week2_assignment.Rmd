@@ -1,0 +1,29 @@
+---
+title: "Developing Data Products_assignment"
+author: "weimf"
+date: "1/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## My map
+I will create a map indicating six municipalities in Taiwan with Leaflet.
+```{r}
+library(leaflet)
+
+my_map <- leaflet() %>%
+addTiles() %>%
+  addMarkers(lat=25.105497, lng=121.597366, popup="Taipei City") %>%
+  addMarkers(lat=25.111388, lng=121.274603, popup="New Taipei City") %>%
+  addMarkers(lat=24.99368,  lng=121.29696,  popup="Taoyuan City") %>%
+  addMarkers(lat=24.147736, lng=120.67364,  popup="Taichung City") %>%
+  addMarkers(lat=22.999727, lng=120.227028, popup="Tainan City") %>%
+  addMarkers(lat=22.633333, lng=120.266670, popup="Kaoshiung City")
+  
+my_map
+```
+
+
